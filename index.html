@@ -78,19 +78,19 @@
           Para realizar la instalación en este Sistema Operativo es recomendable
           tener instalado Homebrew. Haciendo uso del Terminal.app y de homebrew,
           escribimos el siguiente comando:
-          <code>brew install git</code>
+          <pre><code>brew install git</code></pre>
         </section>
         <section id="install-fedora">
           <h4>Instalación en Fedora y similares</h4>
           Si nos encontramos en distribuciones como Fedora, podemos hacer uso
           del manejador de paquetes de dicha distribución.
-          <code>yum install git-core</code>
+          <pre><code>yum install git-core</code></pre>
         </section>
         <section id="install-debian">
           <h4>Instalación en Debian y similares</h4>
           Si nos encontramos en distribuciones basadas en Debian, tal como
           Ubuntu.
-          <code>apt-get install git</code>
+          <pre><code>apt-get install git</code></pre>
         </section>
         <section id="install-windows">
           <h4>Instalación en Windows</h4>
@@ -107,11 +107,11 @@
         <section>
           Para conocer la funcionalidad a detalle de un comando poder hacer uso
           del acceso al manual de usuario.
-          <code>man git config</code>
+          <pre><code>man git config</code></pre>
         </section>
         <section>
           O podemos hacerlo a través del acceso a la ayuda
-          <code>git config --help</code>
+          <pre><code>git config --help</code></pre>
         </section>
         <section>
           Y si esto no fue suficiente ayuda, entonces la documentación en web
@@ -126,16 +126,16 @@
         </section>
         <section>
           Configurar en Git cual será el nombre de la persona que hará uso de él
-          <code>git config --global user.name "Pedro Perez"</code>
+          <pre><code>git config --global user.name "Pedro Perez"</code></pre>
         </section>
         <section>
           Git hace uso del email del usuario cuando consolida la información,
           por esta razón necesitamos configurarlo
-          <code>git config --global user.email "pedroperez@ejemplo.com"</code>
+          <pre><code>git config --global user.email "pedroperez@ejemplo.com"</code></pre>
         </section>
         <section>
           Revisar la configuración
-          <code>git config --list</code>
+          <pre><code>git config --list</code></pre>
         </section>
         <section>
           También debemos conocer que Git guarda esta información dentro del
@@ -153,18 +153,18 @@
           Un repositorio es una carpeta o conjunto de carpetas que contienen
           archivos.
           Podemos crear una carpeta y luego iniciar el repositorio dentro.
-          <code>
+          <pre><code>
             mkdir Ejemplo && cd Ejemplo
             git init .
-          </code>
+          </code></pre>
         </section>
         <section>
           <h5>Agregar archivos al escenario (“stage”)</h5>
-          <code>
+          <pre><code>
             touch Archivo1.txt
             echo 'Hola Mundo' >> Archivo1.txt
             git add Archivo1.txt
-          </code>
+          </code></pre>
           Al ejecutar el comando git add Archivo1.txt estamos confirmando
           (agregando el archivo al escenario) que los cambios que realizamos
           sobre Archivo1.txt se quieren respaldar la próxima vez que
@@ -173,7 +173,7 @@
         <section>
           <h5>Consolidar la información (“commitear”)</h5>
           Para consolidar el archivo previamente creado y puesto en escenario.
-          <code>git commit -m "Commit Inicial"</code>
+          <pre><code>git commit -m "Commit Inicial"</code></pre>
           La bandera -m indica que se debe consolidar el archivo con un mensaje
           informativo.
         </section>
