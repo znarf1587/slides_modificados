@@ -146,10 +146,10 @@
       <!-- -->
       <section>
         <section>
-          <h4>Comandos básicos</h4>
+          <h3>Comandos básicos</h3>
         </section>
         <section>
-          <h5>Inicializar un repositorio</h5>
+          <h4>Inicializar un repositorio</h4>
           Un repositorio es una carpeta o conjunto de carpetas que contienen
           archivos.
           Podemos crear una carpeta y luego iniciar el repositorio dentro.
@@ -159,7 +159,7 @@
           </code></pre>
         </section>
         <section>
-          <h5>Agregar archivos al escenario (“stage”)</h5>
+          <h4>Agregar archivos al escenario ("stage")</h4>
           <pre><code>
             touch Archivo1.txt
             echo 'Hola Mundo' >> Archivo1.txt
@@ -171,11 +171,45 @@
           consolidemos la información.
         </section>
         <section>
-          <h5>Consolidar la información (“commitear”)</h5>
+          <h4>Consolidar la información ("commitear")</h4>
           Para consolidar el archivo previamente creado y puesto en escenario.
           <pre><code>git commit -m "Commit Inicial"</code></pre>
           La bandera -m indica que se debe consolidar el archivo con un mensaje
           informativo.
+        </section>
+        <section>
+          <h4>Clonar repositorio</h4>
+          Primero nos dirigimos al directorio donde queremos que se descargue la
+          copia de seguridad
+          <pre><code>git clone https://github.com/corbmx/taller-git.git</code></pre>
+        </section>
+        <section>
+          <h4>Estatus</h4>
+          Identifica si existe un archivo modificado o no en nuestro repositorio.
+          Esto es importante ya que hay que ubicar los archivos en el escenario
+          antes de consolidarlos en la base de datos.
+          <pre><code>git status</code></pre>
+        </section>
+        <section>
+          <h4>Borrar archivo</h4>
+          Sirve para borrar un archivo pero en este caso sirve para agregar al
+          escenario el archivo que vayamos a borrar
+          <pre><code>
+            rm Archivo1.txt
+            git status
+          </code></pre>
+          <pre><code>
+            git rm Archivo1.txt
+            git status
+          </code></pre>
+        </section>
+        <section>
+          <h4>Mover archivos o cambiar nombres</h4>
+          Confirma cualquier cambio de nombre o movimiento de un archivo
+          <pre><code>
+            git mv Archivo2.txt Archivo2_cambio_de_nombre.txt
+            git status
+          </code></pre>
         </section>
       </section>
 
