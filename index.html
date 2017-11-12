@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <link rel="stylesheet" href="reveal.js/css/theme/simple.css">
   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
 
 
   <!-- Theme used for syntax highlighting of code -->
@@ -36,7 +37,7 @@
       <section>
         <section id="control-versiones">
           <h3>Control de versiones</h3>
-
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </section>
         <section>
           <h3>¿Qué es un control de versiones, y por qué debería importarte?</h3>
@@ -73,15 +74,60 @@
       </section>
 
       <section id="clasificacion">
+        <h3>Clasificación</h3>
+        <ul>
+          <li>Locales</li>
+          <li>Centralizados</li>
+          <li>Distribuidos</li>
+        </ul>
+      </section>
+
+      <section>
         <section>
-          <h3>Clasificación</h3>
-          <ul>
-            <li>Centralizados</li>
-            <li>Distribuidos</li>
-          </ul>
+          <h3>Locales</h3>
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </section>
-        <section id="centralizados">
-          <h4>Centralizados</h4>
+        <section>
+          Un método de control de versiones usado por muchas personas es copiar
+          los archivos a otro directorio (quizás indicando la fecha y hora en
+          que lo hicieron, si son ingeniosos).
+        </section>
+        <section>
+          Este método es muy común porque es muy sencillo, pero también es
+          tremendamente propenso a errores. Es fácil olvidar en qué directorio
+          te encuentras, y guardar accidentalmente en el archivo equivocado o
+          sobrescribir archivos que no querías.
+        </section>
+        <section>
+          Para afrontar este problema los programadores desarrollaron hace
+          tiempo VCS locales que contenían una simple base de datos en la que se
+          llevaba el registro de todos los cambios realizados a los archivos.
+        </section>
+        <section>
+          Una de las herramientas de control de versiones más popular fue un
+          sistema llamado RCS, que todavía podemos encontrar en muchas de las
+          computadoras actuales. Incluso el famoso sistema operativo Mac OS X
+          incluye el comando rcs cuando instalas las herramientas de desarrollo.
+        </section>
+        <section>
+          RCS funciona guardando conjuntos de parches (es decir, las diferencias
+          entre archivos) en un formato especial en disco, y es capaz de recrear
+          cómo era un archivo en cualquier momento a partir de dichos parches.
+        </section>
+      </section>
+
+      <section id="centralizados">
+        <section>
+          <h3>Centralizados</h3>
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        </section>
+        <section>
+          El siguiente gran problema con el que se encuentran las personas es
+          que necesitan colaborar con desarrolladores en otros sistemas. Los
+          sistemas de Control de Versiones Centralizados (CVCS por sus siglas
+          en inglés) fueron desarrollados para solucionar este problema.
+        </section>
+        <section>
           En un sistema de control de versiones centralizado todos nuestros
           fuentes y sus versiones están almacenados en un único directorio
           llamado repositorio de fuentes de un servidor.
@@ -94,14 +140,44 @@
           los fuentes modificados como una nueva versión.
         </section>
         <section>
-          Algunos ejemplos son
+          Tienen un único servidor que contiene todos los archivos versionados,
+          y varios clientes que descargan los archivos desde ese lugar central.
+          Este ha sido el estándar para el control de versiones por muchos años.
+        </section>
+        <section>
+          Ventajas
+          <ul>
+            <li>Todas las personas saben hasta cierto punto en qué están
+              trabajando los otros colaboradores del proyecto.</li>
+            <li>Los administradores tienen control detallado sobre qué puede
+              hacer cada usuario</li>
+          </ul>
+        </section>
+        <section>
+          Desventajas
+          <ul>
+            <li>La más obvia es el punto único de fallo que representa el
+              servidor centralizado.</li>
+          </ul>
+          <p class="warning">Cuando tienes toda la historia del proyecto en un
+            mismo lugar, te arriesgas a perderlo todo.</p>
+        </section>
+        <section>
+          <h3>CVS centralizados:</h3>
           <ul>
             <li>CVS</li>
             <li>Subversion</li>
+            <li>Perforce</li>
           </ul>
         </section>
-        <section id="distribuidos">
+      </section>
+
+      <section id="distribuidos">
+        <section>
           <h3>Distribuidos</h3>
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        </section>
+        <section>
           En un sistema de control de versiones distribuido no hay un
           repositorio central. Todos los desarrolladores tienen su propia copia
           del repositorio, con todas las versiones y toda la historia.
@@ -118,7 +194,7 @@
           no, los modificados se convierten en la versión más moderna.
         </section>
         <section>
-          Algunos ejemplos son
+          <h3>CVS distribuidos:</h3>
           <ul>
             <li>Git</li>
             <li>Mercurial</li>
@@ -130,7 +206,7 @@
       <section>
         <section id="git">
           <h3>¿Qué es GIT?</h3>
-
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </section>
         <section>
           Git en pocas palabras es un controlador de versiones distribuido.
@@ -293,6 +369,7 @@
   // - https://github.com/hakimel/reveal.js#configuration
   // - https://github.com/hakimel/reveal.js#dependencies
   Reveal.initialize({
+    controls: false,
     slideNumber: true,
     dependencies: [
       { src: 'reveal.js/plugin/markdown/marked.js' },

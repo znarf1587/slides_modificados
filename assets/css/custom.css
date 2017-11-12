@@ -31,3 +31,27 @@
   font-style: normal !important;
   color: #fd7e14;
 }
+
+.fa.fa-angle-double-down {
+  color: #1b91ff;
+  position: relative;
+  display: block;
+  animation:movedown 3s ease-out forwards;
+  animation-iteration-count:3;
+
+  /* Safari and Chrome */
+  -webkit-animation:movedown 3s;
+  -webkit-animation-iteration-count:3;
+}
+
+@keyframes movedown
+{
+  from {top:0px; opacity: 0;}
+  to {top:200px; opacity: 1}
+}
+
+@-webkit-keyframes movedown /* Safari and Chrome */
+{
+  from {top:0px; opacity: 0;}
+  to {top:200px; opacity: 1;}
+}
