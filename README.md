@@ -7,8 +7,20 @@ https://nmicht.github.io/slides-versionado/
 
 ## Índice
 
+<ol>
+  <li><a href="https://nmicht.github.io/slides-versionado/#/control-versiones">Definición</a></li>
+  <li><a href="https://nmicht.github.io/slides-versionado/#/caracteristicas">Características</a></li>
+  <li><a href="https://nmicht.github.io/slides-versionado/#/clasificacion">Clasificación</a></li>
+  <ul>
+    <li><a href="https://nmicht.github.io/slides-versionado/#/locales">Locales</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/#/centralizados">Centralizados</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/#/distribuidos">Distribuidos</a></li>
+  </ul>
+</ol>
 
 ## :book: Otros recursos
+
+* [Pro Git book](https://git-scm.com/book/en/v2)
 
 ## :v: Gracias por las recomendaciones
 
