@@ -35,25 +35,94 @@
       <!-- Que es -->
       <section>
         <section id="control-versiones">
-          <h3>Controlador de versiones</h3>
+          <h3>Control de versiones</h3>
 
         </section>
         <section>
-          Un controlador de versiones es un sistema que registra los cambios en
-          un archivo o conjunto de archivos a través del tiempo para que se
-          puedan recuperar versiones específicas de los mismos más adelante.
+          <h3>¿Qué es un control de versiones, y por qué debería importarte?</h3>
+        </section>
+        <section>
+          Un control de versiones o VCS (del inglés Version Control System) es
+          un sistema que registra los cambios realizados en un archivo o
+          conjunto de archivos a lo largo del tiempo, de modo que puedas
+          recuperar versiones específicas más adelante.
+        </section>
+        <section>
+          Dicho sistema te permite regresar a versiones anteriores de tus
+          archivos, regresar a una versión anterior del proyecto completo,
+          comparar cambios a lo largo del tiempo, ver quién modificó por última
+          vez algo que pueda estar causando problemas, ver quién introdujo un
+          problema y cuándo, y mucho más.
+        </section>
+        <section>
+          Usar un VCS también significa generalmente que si arruinas o pierdes
+          archivos, será posible recuperarlos fácilmente. Adicionalmente,
+          obtendrás todos estos beneficios a un costo muy bajo.
         </section>
       </section>
 
-      <!-- Distribuido -->
-      <section>
-        <section id="distribuido">
-          <h3>Control de versiones distribuido</h3>
+      <section id="caracteristicas">
+        <h3>Características</h3>
+        Un sistema de control de versiones debe proporcionar:
+        <ul>
+          <li>Mecanismo de almacenamiento de los elementos que deba gestionar.</li>
+          <li>Posibilidad de realizar cambios sobre los elementos almacenados.</li>
+          <li>Registro histórico de las acciones realizadas con cada elemento o
+            conjunto de elementos.</li>
+        </ul>
+      </section>
+
+      <section id="clasificacion">
+        <section>
+          <h3>Clasificación</h3>
+          <ul>
+            <li>Centralizados</li>
+            <li>Distribuidos</li>
+          </ul>
+        </section>
+        <section id="centralizados">
+          <h4>Centralizados</h4>
+          En un sistema de control de versiones centralizado todos nuestros
+          fuentes y sus versiones están almacenados en un único directorio
+          llamado repositorio de fuentes de un servidor.
         </section>
         <section>
-          Cuando los usuarios descargan la última versión, no solo están
-          descargando los archivos; sino también realizando una copia de
-          seguridad del repositorio.
+          Todos los desarrolladores que quieran trabajar con esos fuentes,
+          deben pedirle al sistema de control de versiones una copia local para
+          trabajar. En ella realizan todos sus cambios y cuando están listos y
+          funcionando, le dicen al sistema de control de versiones que guarde
+          los fuentes modificados como una nueva versión.
+        </section>
+        <section>
+          Algunos ejemplos son
+          <ul>
+            <li>CVS</li>
+            <li>Subversion</li>
+          </ul>
+        </section>
+        <section id="distribuidos">
+          <h3>Distribuidos</h3>
+          En un sistema de control de versiones distribuido no hay un
+          repositorio central. Todos los desarrolladores tienen su propia copia
+          del repositorio, con todas las versiones y toda la historia.
+        </section>
+        <section>
+          Por supuesto, según van desarrollando y haciendo cambios, sus fuentes
+          y versiones van siendo distintas unas de otras. Sin embargo, los
+          sistemas de control de versiones distribuidos permiten que en
+          cualquier momento dos desarrolladores cualesquiera puedan
+          <strong>sincronizar</strong> sus repositorios.
+        </section>
+        <section>
+          Si uno de los desarrolladores ha tocado determinados fuentes y el otro
+          no, los modificados se convierten en la versión más moderna.
+        </section>
+        <section>
+          Algunos ejemplos son
+          <ul>
+            <li>Git</li>
+            <li>Mercurial</li>
+          </ul>
         </section>
       </section>
 
