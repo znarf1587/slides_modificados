@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Control de Versiones | Maestría en Desarrollo Web</title>
+
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Presentation -->
+      <section>
+        <h3>Maestría en Desarrollo Web</h3>
+        <h2>Control de Versiones</h2>
+        <h1>Introducción</h1>
+      </section>
+
+      <section id="index">
+        <h3>Indice</h3>
+        <ol>
+          <li><a href="#/control-versiones">Definición</a></li>
+          <li><a href="#/caracteristicas">Características</a></li>
+          <li><a href="#/clasificacion">Clasificación</a></li>
+          <ul>
+            <li><a href="#/locales">Locales</a></li>
+            <li><a href="#/centralizados">Centralizados</a></li>
+            <li><a href="#/distribuidos">Distribuidos</a></li>
+          </ul>
+        </ol>
+      </section>
+
+      <!-- Que es -->
+      <section>
+        <section id="control-versiones">
+          <h3>Control de versiones</h3>
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        </section>
+        <section>
+          <h3>¿Qué es un control de versiones, y por qué debería importarte?</h3>
+        </section>
+        <section>
+          Un control de versiones o VCS (del inglés Version Control System) es
+          un sistema que registra los cambios realizados en un archivo o
+          conjunto de archivos a lo largo del tiempo, de modo que puedas
+          recuperar versiones específicas más adelante.
+        </section>
+        <section>
+          Dicho sistema te permite regresar a versiones anteriores de tus
+          archivos, regresar a una versión anterior del proyecto completo,
+          comparar cambios a lo largo del tiempo, ver quién modificó por última
+          vez algo que pueda estar causando problemas, ver quién introdujo un
+          problema y cuándo, y mucho más.
+        </section>
+        <section>
+          Usar un VCS también significa generalmente que si arruinas o pierdes
+          archivos, será posible recuperarlos fácilmente. Adicionalmente,
+          obtendrás todos estos beneficios a un costo muy bajo.
+        </section>
+      </section>
+
+      <section id="caracteristicas">
+        <h3>Características</h3>
+        Un sistema de control de versiones debe proporcionar:
+        <ul>
+          <li>Mecanismo de almacenamiento de los elementos que deba gestionar.</li>
+          <li>Posibilidad de realizar cambios sobre los elementos almacenados.</li>
+          <li>Registro histórico de las acciones realizadas con cada elemento o
+            conjunto de elementos.</li>
+        </ul>
+      </section>
+
+      <section id="clasificacion">
+        <h3>Clasificación</h3>
+        <ul>
+          <li>Locales</li>
+          <li>Centralizados</li>
+          <li>Distribuidos</li>
+        </ul>
+      </section>
+
+      <section id="locales">
+        <section>
+          <h3>Locales</h3>
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        </section>
+        <section>
+          Un método de control de versiones usado por muchas personas es copiar
+          los archivos a otro directorio (quizás indicando la fecha y hora en
+          que lo hicieron, si son ingeniosos).
+        </section>
+        <section>
+          Este método es muy común porque es muy sencillo, pero también es
+          tremendamente propenso a errores. Es fácil olvidar en qué directorio
+          te encuentras, y guardar accidentalmente en el archivo equivocado o
+          sobrescribir archivos que no querías.
+        </section>
+        <section>
+          Para afrontar este problema los programadores desarrollaron hace
+          tiempo VCS locales que contenían una simple base de datos en la que se
+          llevaba el registro de todos los cambios realizados a los archivos.
+        </section>
+        <section>
+          Una de las herramientas de control de versiones más popular fue un
+          sistema llamado RCS, que todavía podemos encontrar en muchas de las
+          computadoras actuales. Incluso el famoso sistema operativo Mac OS X
+          incluye el comando rcs cuando instalas las herramientas de desarrollo.
+        </section>
+        <section>
+          RCS funciona guardando conjuntos de parches (es decir, las diferencias
+          entre archivos) en un formato especial en disco, y es capaz de recrear
+          cómo era un archivo en cualquier momento a partir de dichos parches.
+        </section>
+      </section>
+
+      <section id="centralizados">
+        <section>
+          <h3>Centralizados</h3>
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        </section>
+        <section>
+          El siguiente gran problema con el que se encuentran las personas es
+          que necesitan colaborar con desarrolladores en otros sistemas. Los
+          sistemas de Control de Versiones Centralizados (CVCS por sus siglas
+          en inglés) fueron desarrollados para solucionar este problema.
+        </section>
+        <section>
+          En un sistema de control de versiones centralizado todos nuestros
+          fuentes y sus versiones están almacenados en un único directorio
+          llamado repositorio de fuentes de un servidor.
+        </section>
+        <section>
+          Todos los desarrolladores que quieran trabajar con esos fuentes,
+          deben pedirle al sistema de control de versiones una copia local para
+          trabajar. En ella realizan todos sus cambios y cuando están listos y
+          funcionando, le dicen al sistema de control de versiones que guarde
+          los fuentes modificados como una nueva versión.
+        </section>
+        <section>
+          Tienen un único servidor que contiene todos los archivos versionados,
+          y varios clientes que descargan los archivos desde ese lugar central.
+          Este ha sido el estándar para el control de versiones por muchos años.
+        </section>
+        <section>
+          Ventajas
+          <ul>
+            <li>Todas las personas saben hasta cierto punto en qué están
+              trabajando los otros colaboradores del proyecto.</li>
+            <li>Los administradores tienen control detallado sobre qué puede
+              hacer cada usuario</li>
+          </ul>
+        </section>
+        <section>
+          Desventajas
+          <ul>
+            <li>La más obvia es el punto único de fallo que representa el
+              servidor centralizado.</li>
+          </ul>
+          <p class="warning">Cuando tienes toda la historia del proyecto en un
+            mismo lugar, te arriesgas a perderlo todo.</p>
+        </section>
+        <section>
+          <h3>CVS centralizados:</h3>
+          <ul>
+            <li>CVS</li>
+            <li>Subversion</li>
+            <li>Perforce</li>
+          </ul>
+        </section>
+      </section>
+
+      <section id="distribuidos">
+        <section>
+          <h3>Distribuidos</h3>
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        </section>
+        <section>
+          En un sistema de control de versiones distribuido no hay un
+          repositorio central. Todos los desarrolladores tienen su propia copia
+          del repositorio, con todas las versiones y toda la historia.
+        </section>
+        <section>
+          Por supuesto, según van desarrollando y haciendo cambios, sus fuentes
+          y versiones van siendo distintas unas de otras. Sin embargo, los
+          sistemas de control de versiones distribuidos permiten que en
+          cualquier momento dos desarrolladores cualesquiera puedan
+          <strong>sincronizar</strong> sus repositorios.
+        </section>
+        <section>
+          Si uno de los desarrolladores ha tocado determinados fuentes y el otro
+          no, los modificados se convierten en la versión más moderna.
+        </section>
+        <section>
+          <h3>CVS distribuidos:</h3>
+          <ul>
+            <li>Git</li>
+            <li>Mercurial</li>
+          </ul>
+        </section>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+  // More info about config & dependencies:
+  // - https://github.com/hakimel/reveal.js#configuration
+  // - https://github.com/hakimel/reveal.js#dependencies
+  Reveal.initialize({
+    controls: false,
+    slideNumber: true,
+    dependencies: [
+      { src: 'reveal.js/plugin/markdown/marked.js' },
+      { src: 'reveal.js/plugin/markdown/markdown.js' },
+      { src: 'reveal.js/plugin/notes/notes.js', async: true },
+      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+  });
+  </script>
+</body>
+</html>
