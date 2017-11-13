@@ -35,93 +35,15 @@
       </section>
 
       <section id="index">
-        
-      </section>
-
-      <!-- GIT -->
-      <section>
-        <section id="git">
-          <h3>¿Qué es GIT?</h3>
-          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
-        </section>
-        <section>
-          Git en pocas palabras es un controlador de versiones distribuido.
-        </section>
-      </section>
-
-      <!-- Instalacion -->
-      <section id="instalacion">
-        <section>
-          <h3>Instalación de GIT</h3>
-        </section>
-        <section id="install-mac">
-          <h4>Instalación en MacOS</h4>
-          Para realizar la instalación en este Sistema Operativo es recomendable
-          tener instalado Homebrew. Haciendo uso del Terminal.app y de homebrew,
-          escribimos el siguiente comando:
-          <pre><code>brew install git</code></pre>
-        </section>
-        <section id="install-fedora">
-          <h4>Instalación en Fedora y similares</h4>
-          Si nos encontramos en distribuciones como Fedora, podemos hacer uso
-          del manejador de paquetes de dicha distribución.
-          <pre><code>yum install git-core</code></pre>
-        </section>
-        <section id="install-debian">
-          <h4>Instalación en Debian y similares</h4>
-          Si nos encontramos en distribuciones basadas en Debian, tal como
-          Ubuntu.
-          <pre><code>apt-get install git</code></pre>
-        </section>
-        <section id="install-windows">
-          <h4>Instalación en Windows</h4>
-          Si nos encontramos el Windows la manera más sencilla de realizar la
-          instalación es descargar el Instalador y seguir los pasos.
-          <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>
-        </section>
-      </section>
-
-      <section>
-        <section id="ayuda">
-          <h3>Ayuda en GIT</h3>
-        </section>
-        <section>
-          Para conocer la funcionalidad a detalle de un comando poder hacer uso
-          del acceso al manual de usuario.
-          <pre><code>man git config</code></pre>
-        </section>
-        <section>
-          O podemos hacerlo a través del acceso a la ayuda
-          <pre><code>git config --help</code></pre>
-        </section>
-        <section>
-          Y si esto no fue suficiente ayuda, entonces la documentación en web
-          <a href="https://git-scm.com/docs/">https://git-scm.com/docs/</a>
-        </section>
-      </section>
-
-      <section id="configuracion">
-        <section>
-          <h3>Configuración</h3>
-
-        </section>
-        <section>
-          Configurar en Git cual será el nombre de la persona que hará uso de él
-          <pre><code>git config --global user.name "Pedro Perez"</code></pre>
-        </section>
-        <section>
-          Git hace uso del email del usuario cuando consolida la información,
-          por esta razón necesitamos configurarlo
-          <pre><code>git config --global user.email "pedroperez@ejemplo.com"</code></pre>
-        </section>
-        <section>
-          Revisar la configuración
-          <pre><code>git config --list</code></pre>
-        </section>
-        <section>
-          También debemos conocer que Git guarda esta información dentro del
-          archivo oculto <strong>.gitconfig</strong> en el Home del usuario.
-        </section>
+        <ol>
+          <li><a href="#/start">Inicializar un repositorio</a></li>
+          <li><a href="#/add">Agregar archivos al stage</a></li>
+          <li><a href="#/commit">Hacer un commit</a></li>
+          <li><a href="#/clone">Clonar un repositorio</a></li>
+          <li><a href="#/status">Revisar el estado actual de trabajo</a></li>
+          <li><a href="#/rm">Eliminar archivos</a></li>
+          <li><a href="#/mv">Mover archivos</a></li>
+        </ol>
       </section>
 
       <!-- -->
@@ -129,7 +51,8 @@
         <section>
           <h3>Comandos básicos</h3>
         </section>
-        <section>
+
+        <section id="start">
           <h4>Inicializar un repositorio</h4>
           Un repositorio es una carpeta o conjunto de carpetas que contienen
           archivos.
@@ -139,7 +62,8 @@
             git init .
           </code></pre>
         </section>
-        <section>
+
+        <section id="add">
           <h4>Agregar archivos al escenario ("stage")</h4>
           <pre><code>
             touch Archivo1.txt
@@ -151,27 +75,31 @@
           sobre Archivo1.txt se quieren respaldar la próxima vez que
           consolidemos la información.
         </section>
-        <section>
+
+        <section id="commit">
           <h4>Consolidar la información ("commitear")</h4>
           Para consolidar el archivo previamente creado y puesto en escenario.
           <pre><code>git commit -m "Commit Inicial"</code></pre>
           La bandera -m indica que se debe consolidar el archivo con un mensaje
           informativo.
         </section>
-        <section>
+
+        <section id="clone">
           <h4>Clonar repositorio</h4>
           Primero nos dirigimos al directorio donde queremos que se descargue la
           copia de seguridad
           <pre><code>git clone https://github.com/corbmx/taller-git.git</code></pre>
         </section>
-        <section>
+
+        <section id="status">
           <h4>Estatus</h4>
           Identifica si existe un archivo modificado o no en nuestro repositorio.
           Esto es importante ya que hay que ubicar los archivos en el escenario
           antes de consolidarlos en la base de datos.
           <pre><code>git status</code></pre>
         </section>
-        <section>
+
+        <section id="rm">
           <h4>Borrar archivo</h4>
           Sirve para borrar un archivo pero en este caso sirve para agregar al
           escenario el archivo que vayamos a borrar
@@ -184,7 +112,8 @@
             git status
           </code></pre>
         </section>
-        <section>
+
+        <section id="mv">
           <h4>Mover archivos o cambiar nombres</h4>
           Confirma cualquier cambio de nombre o movimiento de un archivo
           <pre><code>

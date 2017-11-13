@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Control de Versiones | Maestría en Desarrollo Web</title>
+
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Presentation -->
+      <section>
+        <h3>Maestría en Desarrollo Web</h3>
+        <h2>Control de Versiones</h2>
+        <h1>Introducción</h1>
+      </section>
+
+      <section id="index">
+        <ol>
+          <li><a href="#/git">¿Qué es GIT?</a></li>
+          <li><a href="#/instalacion">Instalación</a></li>
+            <ul>
+              <li><a href="#/install-mac">Instalación en MacOS</a></li>
+              <li><a href="#/install-fedora">Instalación en Fedora</a></li>
+              <li><a href="#/install-debian">Instalación en Debian</a></li>
+              <li><a href="#/install-windows">Instalación en Windows</a></li>
+            </ul>
+          <li><a href="#/ayuda">Ayuda en GIT</a></li>
+          <li><a href="#/config">Configuracion</a></li>
+        </ol>
+      </section>
+
+      <!-- GIT -->
+      <section>
+        <section id="git">
+          <h3>¿Qué es GIT?</h3>
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        </section>
+        <section>
+          Git en pocas palabras es un controlador de versiones distribuido.
+        </section>
+      </section>
+
+      <!-- Instalacion -->
+      <section id="instalacion">
+        <section>
+          <h3>Instalación de GIT</h3>
+        </section>
+        <section id="install-mac">
+          <h4>Instalación en MacOS</h4>
+          Para realizar la instalación en este Sistema Operativo es recomendable
+          tener instalado Homebrew. Haciendo uso del Terminal.app y de homebrew,
+          escribimos el siguiente comando:
+          <pre><code>brew install git</code></pre>
+        </section>
+        <section id="install-fedora">
+          <h4>Instalación en Fedora y similares</h4>
+          Si nos encontramos en distribuciones como Fedora, podemos hacer uso
+          del manejador de paquetes de dicha distribución.
+          <pre><code>yum install git-core</code></pre>
+        </section>
+        <section id="install-debian">
+          <h4>Instalación en Debian y similares</h4>
+          Si nos encontramos en distribuciones basadas en Debian, tal como
+          Ubuntu.
+          <pre><code>apt-get install git</code></pre>
+        </section>
+        <section id="install-windows">
+          <h4>Instalación en Windows</h4>
+          Si nos encontramos el Windows la manera más sencilla de realizar la
+          instalación es descargar el Instalador y seguir los pasos.
+          <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>
+        </section>
+      </section>
+
+      <section>
+        <section id="ayuda">
+          <h3>Ayuda en GIT</h3>
+        </section>
+        <section>
+          Para conocer la funcionalidad a detalle de un comando poder hacer uso
+          del acceso al manual de usuario.
+          <pre><code>man git config</code></pre>
+        </section>
+        <section>
+          O podemos hacerlo a través del acceso a la ayuda
+          <pre><code>git config --help</code></pre>
+        </section>
+        <section>
+          Y si esto no fue suficiente ayuda, entonces la documentación en web
+          <a href="https://git-scm.com/docs/">https://git-scm.com/docs/</a>
+        </section>
+      </section>
+
+      <section id="config">
+        <section>
+          <h3>Configuración</h3>
+
+        </section>
+        <section>
+          Configurar en Git cual será el nombre de la persona que hará uso de él
+          <pre><code>git config --global user.name "Pedro Perez"</code></pre>
+        </section>
+        <section>
+          Git hace uso del email del usuario cuando consolida la información,
+          por esta razón necesitamos configurarlo
+          <pre><code>git config --global user.email "pedroperez@ejemplo.com"</code></pre>
+        </section>
+        <section>
+          Revisar la configuración
+          <pre><code>git config --list</code></pre>
+        </section>
+        <section>
+          También debemos conocer que Git guarda esta información dentro del
+          archivo oculto <strong>.gitconfig</strong> en el Home del usuario.
+        </section>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+  // More info about config & dependencies:
+  // - https://github.com/hakimel/reveal.js#configuration
+  // - https://github.com/hakimel/reveal.js#dependencies
+  Reveal.initialize({
+    controls: false,
+    slideNumber: true,
+    dependencies: [
+      { src: 'reveal.js/plugin/markdown/marked.js' },
+      { src: 'reveal.js/plugin/markdown/markdown.js' },
+      { src: 'reveal.js/plugin/notes/notes.js', async: true },
+      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+  });
+  </script>
+</body>
+</html>
