@@ -47,17 +47,14 @@ https://nmicht.github.io/slides-versionado/
   <li><a href="#">Git, Hooks</a></li>
 </ol>
 
-## :book: Otros recursos
+## :book: Otros buenos recursos
 
 * [Pro Git book](https://git-scm.com/book/en/v2)
 
-## :v: Gracias por las recomendaciones
+## Referencias
 
-* TBD
-
-## :bowtie: Colaboradores
-
-* [@nmicht](https://github.com/nmicht)
+* [Sistemas de control de versiones](https://www.ecured.cu/Sistemas_de_control_de_versiones)
+* [Mercurial vs Git](http://danteslab.blogspot.mx/2014/01/mercurial-vs-git.html)
 
 ## Licencia
 
