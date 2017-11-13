@@ -99,13 +99,16 @@
 
       <section id="locales">
         <section>
-          <h3>Locales</h3>
+          <h3>Sistemas de versionado Locales</h3>
           <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </section>
         <section>
           Un método de control de versiones usado por muchas personas es copiar
           los archivos a otro directorio (quizás indicando la fecha y hora en
           que lo hicieron, si son ingeniosos).
+        </section>
+        <section>
+          <img src="assets/img/antes-de-git.png" alt="Antes de GIT">
         </section>
         <section>
           Este método es muy común porque es muy sencillo, pero también es
@@ -119,10 +122,14 @@
           llevaba el registro de todos los cambios realizados a los archivos.
         </section>
         <section>
+          <img src="assets/img/local.png" alt="">
+        </section>
+        <section>
           Una de las herramientas de control de versiones más popular fue un
-          sistema llamado RCS, que todavía podemos encontrar en muchas de las
-          computadoras actuales. Incluso el famoso sistema operativo Mac OS X
-          incluye el comando rcs cuando instalas las herramientas de desarrollo.
+          sistema llamado <a href="https://www.gnu.org/software/rcs/">RCS</a>,
+          que todavía podemos encontrar en muchas de las computadoras actuales.
+          Incluso el famoso sistema operativo Mac OS X incluye el comando <code>rcs</code>
+          cuando instalas las herramientas de desarrollo.
         </section>
         <section>
           RCS funciona guardando conjuntos de parches (es decir, las diferencias
@@ -133,7 +140,7 @@
 
       <section id="centralizados">
         <section>
-          <h3>Centralizados</h3>
+          <h3>Sistemas de versionado Centralizados</h3>
           <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </section>
         <section>
@@ -146,6 +153,9 @@
           En un sistema de control de versiones centralizado todos nuestros
           fuentes y sus versiones están almacenados en un único directorio
           llamado repositorio de fuentes de un servidor.
+        </section>
+        <section>
+          <img src="assets/img/centralized.png" alt="">
         </section>
         <section>
           Todos los desarrolladores que quieran trabajar con esos fuentes,
@@ -180,22 +190,62 @@
         <section>
           <h3>CVS centralizados:</h3>
           <ul>
-            <li>CVS</li>
-            <li>Subversion</li>
-            <li>Perforce</li>
+            <li><a href="http://savannah.nongnu.org/projects/cvs">CVS</a></li>
+            <li><a href="https://subversion.apache.org/">Subversion</a></li>
+            <li><a href="https://www.perforce.com/">Perforce</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>CVS</h3>
+          CVS ha estado durante mucho tiempo, y muchos desarrolladores están ya
+          familiarizados con él. En su día fue revolucionario: fue el primer
+          sistema de control de versiones de código abierto con acceso a redes
+          de área amplia para desarrolladores, y el primero que ofreció
+          "checkouts" anónimos de sólo lectura, los que dieron a los
+          desarrolladores una manera fácil de implicarse en los proyectos. <br>
+          CVS sólo versiona archivos, no directorios; ofrece ramificaciones,
+          etiquetado, y un buen rendimiento en la parte del cliente, pero no
+          maneja muy bien ficheros grandes ni archivos binarios.
+          Tampoco soporta cambios atómicos.
+        </section>
+        <section>
+          <h3>Subversion</h3>
+          Subversion fue escrito ante todo para reemplazar a CVS es decir, para
+          acceder al control de versiones aproximadamente de la misma manera que
+          CVS lo hace, pero sin los problemas o falta de utilidades que más
+          frecuentemente molestan a los usuarios de CVS. <br>
+          Uno de los objetivos de Subversion es encontrar la transición a
+          Subversion relativamente suave para la gente que ya está acostumbrada
+          a CVS.
+        </section>
+        <section>
+          <h3>Subversión como evolución de CVS</h3>
+          <ul>
+            <li>Renombar, copiar y mover ficheros y directorios sin perdida del histórico.</li>
+            <li>Commits atómicos.</li>
+            <li>Implementación de tres tipos de acceso:</li>
+            <li>Stand-alone</li>
+            <li>Local</li>
+            <li>Apache + webDAV</li>
+            <li>Mejorado el sistema de permisos.</li>
+            <li>Reducción del riesgo de vulnerabilidades por sus distintos RA (repository access).</li>
+            <li>Integración con Project Software Manager (Por ejemplo: trac).</li>
           </ul>
         </section>
       </section>
 
       <section id="distribuidos">
         <section>
-          <h3>Distribuidos</h3>
+          <h3>Sistemas de versionado Distribuidos</h3>
           <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </section>
         <section>
           En un sistema de control de versiones distribuido no hay un
           repositorio central. Todos los desarrolladores tienen su propia copia
           del repositorio, con todas las versiones y toda la historia.
+        </section>
+        <section>
+          <img src="assets/img/distributed.png" alt="">
         </section>
         <section>
           Por supuesto, según van desarrollando y haciendo cambios, sus fuentes
@@ -211,10 +261,124 @@
         <section>
           <h3>CVS distribuidos:</h3>
           <ul>
-            <li>Git</li>
-            <li>Mercurial</li>
+            <li><a href="https://git-scm.com/">Git</a href="https://git-scm.com/"></li>
+            <li><a href="https://www.mercurial-scm.org/">Mercurial</a></li>
+            <li><a href="http://bazaar.canonical.com/en/">Bazaar</a></li>
           </ul>
         </section>
+        <section>
+          <h3>¿Notaste el scm en las páginas?</h3>
+          <strong>Software Configuration Management</strong>, también conocido como
+          control de versiones, o control de revisiones, inclusive, control de
+          código.
+        </section>
+        <section>
+          <h3>Mercurial</h3>
+          Mercurial ofrece, entre otras cosas, una completa indexación cruzada
+          de ficheros y conjutos de cambios; unos procotolos de sincronización
+          SSH y HTTP eficientes respecto al uso de CPU y ancho de banda; una
+          fusión arbitraria entre ramas de desarrolladores; una interfaz web
+          autónoma integrada; portabilidad a UNIX, MacOS X, y Windows y más.
+        </section>
+        <section>
+          <h3>GIT</h3>
+          GIT es un proyecto empezado por Linus Torvalds para manejar el arbol
+          fuente del kernel de Linux. Esta diseñado para manejar proyectos muy
+          grandes eficaz y velozmente.<br>
+          Cada directorio de trabajo de GIT es un repositorio completo con
+          plenas capacidades de gestión de revisiones, sin depender del acceso
+          a la red o de un servidor central.
+        </section>
+        <section>
+          <h3>Bazaar</h3>
+          Es un sistema de control de versiones distribuido patrocinado por
+          Canonical Ltd., diseñado para facilitar la contribución en proyectos
+          de software libre y opensource.<br>
+          Puede ser usado por un usuario único trabajando en múltiples ramas de
+          un contenido local, o por un equipo colaborando a través de la red.<br>
+          Está escrito en Python y tiene versiones empaquetadas para la mayoría
+          de distribuciones GNU/Linux, así como Mac OS X y MS Windows.
+        </section>
+      </section>
+
+      <section id="git-vs-mercurial">
+        <section>
+          <h3>GIT vs Mercurial</h3>
+          <a href="https://importantshock.wordpress.com/2008/08/07/git-vs-mercurial/">MacGyver vs James Bond</a>
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        </section>
+        <section>
+          En realidad su origen es muy similar, hace algún tiempo el grupo de
+          trabajo que desarrolla el kernel de Linux decidió escribir su propia
+          herramienta de control de versiones. <br>
+          Se abrieron dos vías de desarrollo, una capitaneada por el mismo Linus
+          Torvals que desarrolló Git usando C, Bash y Perl, la otra la lideraba
+          Matt Mackall que desarrolló Mercurial usando C y Python.
+        </section>
+        <section>
+          Al final se optó por Git en parte porque se finalizó unos días antes y
+          en parte, dicen las malas lenguas, por ser obra de Linus.
+        </section>
+      </section>
+
+      <section id="macgyver">
+        <section>
+          <h3>GIT, el MacGyver de las herramientas de control de versión</h3>
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        </section>
+        <section>
+          Git parte del enfoque de Unix de que cada tarea concreta se haga con
+          un ejecutable particular, de manera que las tareas más complejas se
+          realicen combinando los ejecutables individuales.
+        </section>
+        <section>
+          Como consecuencia de ellos instalar Git supone la instalación de más
+          de 100 programitas especializados en tareas concretas del control de
+          versiones.
+        </section>
+        <section>
+          Esto eleva la dificultad de aprender Git pero aumenta exponencialmente
+          su flexibilidad permitiendo que pueda ser configurado para dar soporte
+          a los workflows de desarrollo más complejos que se nos puedan ocurrir.
+        </section>
+        <section>
+          Ese enfoque de combinar elementos sencillos para dar lugar a sistemas
+          más potentes es lo que hace de Git el MacGyver de las herramientas de
+          control de versión.
+        </section>
+      </section>
+
+      <section id="james-bond">
+        <section>
+          <h3>Mercurial, es como James Bond</h3>
+          <h4>Te sobrará tiempo para tomarte un martini con vodka</h4>
+          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        </section>
+        <section>
+          Sólo instala un ejecutable el cual se usa en cada situación con unos
+          argumentos u otros. Esta sencillez facilita enormemente su aprendizaje
+          y de hecho, se dice que los que conocen Subversion encuentran
+          realmente fácil pasar a Mercurial porque los comandos principales son
+          muy parecidos.
+        </section>
+        <section>
+          Hay que reconocer que en Mercurial todo es bastante intuitivo y
+          limpio. Al final, el 80% del tiempo uno acaba usando siempre unos
+          pocos comandos nada más. Mercurial ofrece sencillez.
+        </section>
+        <section>
+          Grandes proyectos de la comunidad libre lo utilizan, como el que
+          desarrolla el mismo Python o varios de la fundación Mozilla.
+        </section>
+        <section>
+          Por eso, Mercurial es como James Bond, si lo utilizas en la situación
+          correcta será capaz de solucionarla de manera espectacularmente
+          elegante y aún te sobrará tiempo para tomarte un martini con vodka.
+        </section>
+      </section>
+
+      <section>
+        <a href="git/">Ir al siguiente módulo</a>
       </section>
 
     </div>

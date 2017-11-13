@@ -55,3 +55,9 @@
   from {top:0px; opacity: 0;}
   to {top:200px; opacity: 1;}
 }
+
+.reveal section img {
+  background:none;
+  border:none;
+  box-shadow:none;
+}
