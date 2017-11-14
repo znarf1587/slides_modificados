@@ -47,6 +47,7 @@ https://nmicht.github.io/slides-versionado/
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/log">Historial (log)</a></li>
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/reset1">Quitar del stage</a></li>
     <li><a href="https://nmicht.github.io/slides-versionado/basics#/checkout1">Cancelar cambios</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/amend">Corregir commits</a></li>
   </ol>
   <li><a href="https://nmicht.github.io/slides-versionado/remotes">GIT, remotos</a></li>
   <li><a href="#">GIT, ramas</a></li>

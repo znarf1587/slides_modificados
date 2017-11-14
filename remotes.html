@@ -36,16 +36,101 @@
 
       <section id="index">
         <ol>
+          <li><a href="#/remoto">Repositorio remoto</a></li>
           <li><a href="#/clone">Clonar un repositorio</a></li>
+          <li><a href="#/remote-v">Listar remotos</a></li>
+          <li><a href="#/remote-add">Agregar remoto</a></li>
+          <li><a href="#/push">Subir cambios a remoto</a></li>
         </ol>
+      </section>
+
+      <section id="remoto">
+        <h3>Repositorio Remoto</h3>
+        Un repositorio remoto no es más que una copia de los archivos, carpetas,
+        fotos, etc. qué se encuentran bajo la supervisión de git, y están
+        respaldados en un sitio externo a nuestra computadora (Internet, o una
+        red local domestica/oficina, etc.). <br>
+        Esto nos permite poder colaborar en un proyecto con otros usuarios de
+        manera distribuida; cabe destacar que un repositorio remoto se pueden
+        tener permisos de lectura y escritura o solo lectura.
       </section>
 
       <section id="clone">
         <h3>Clonar repositorio</h3>
-        Primero nos dirigimos al directorio donde queremos que se descargue la
-        copia de seguridad
+        El comando git clone lo utilizaremos para literalmente realizar una
+        copia de seguridad de lo que se encuentra en el servidor remoto.
+        Cualquiera puede copiar un repositorio completo y hospedarlo en su
+        computadora por si ocurre algún imprevisto con el servidor remoto, si
+        se desea contribuir o distribuir un proyecto.
         <pre><code data-trim>git clone https://github.com/corbmx/taller-git.git</code></pre>
+        <p class="info">Si quieres guardar en una carpeta a la definida solo
+          agrega al final el nombre del folder que deseas.</p>
       </section>
+
+      <section>
+        <h3>Protocolo SSH o HTTPS</h3>
+
+      </section>
+
+      <section id="remote-v">
+        <h3>Listar los remotos de un repositorio</h3>
+        <pre><code>git remote</code></pre>
+        Los remotos utilizan alias o names para la dirección remota de donde
+        efectuamos la clonación.
+        <pre><code>git remote -v</code></pre>
+      </section>
+
+      <section id="remote-add">
+        <h3>Agregar remotos</h3>
+        Si tuviésemos otro repositorio del mismo proyecto pero en un servidor de
+        pruebas donde alojamos código que necesitamos ir probando, pudiésemos
+        agregar otra dirección remota y enviarle los cambios sin afectar a
+        "origin".
+        <pre><code>git remote add servidor-de-pruebas https://github.com/corbmx/pruebas-git.git</code></pre>
+        Ahora revisa los remotos
+        <pre><code>git remote -v</code></pre>
+      </section>
+
+      <section id="remote-rm">
+        <h3>Quitar remotos</h3>
+        <pre><code>git remote rm origin</code></pre>
+      </section>
+
+      <section id="push">
+        <h3>Subir cambios a remoto</h3>
+        Una vez que hemos conectado el repositorio remoto con el local y tenemos
+        cambios consolidados en nuestra computadora que deseamos compartir,
+        utilizamos el comando git push [remoto] [ramificación]
+        <pre><code>git push origin master</code></pre>
+      </section>
+
+      <section id="fetch">
+        <h3>Obtener cambios de remoto</h3>
+        Utilizando el comando fetch obtenemos los cambios que se encuentren en
+        el servidor remoto que hayan sido realizados por nuestros compañeros y
+        los copiamos a nuestra computadora.
+        <pre><code>git fetch origin</code></pre>
+      </section>
+
+      <section>
+        De esta manera actualizamos nuestra información local con la información
+        que se encuentre remota. Pero no será reflejada en el git log hasta que
+        la unamos con nuestro árbol de trabajo (ramificación).
+      </section>
+
+      <section id="merge">
+        <h3>Fusionar cambios</h3>
+        <pre><code>git merge</code></pre>
+      </section>
+
+      <section id="pull">
+        <h3>Obtener cambios y fusionarlos</h3>
+        git pull realiza un fetch más un merge. Descarga los cambios que se
+        encuentren en el repositorio remoto y los unifica con los cambios que
+        tengamos en nuestro equipo.
+      </section>
+
+
 
 
       <section>

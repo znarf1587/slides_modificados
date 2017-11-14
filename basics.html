@@ -48,6 +48,7 @@
           <li><a href="#/log">Historial (log)</a></li>
           <li><a href="#/reset1">Quitar del stage</a></li>
           <li><a href="#/checkout1">Cancelar cambios</a></li>
+          <li><a href="#/amend">Corrigiendo commits</a></li>
         </ol>
       </section>
 
@@ -193,11 +194,18 @@ git status
         <pre><code>git checkout -- file</code></pre>
       </section>
 
-      <section id="clone">
-        <h3>Clonar repositorio</h3>
-        Primero nos dirigimos al directorio donde queremos que se descargue la
-        copia de seguridad
-        <pre><code data-trim>git clone https://github.com/corbmx/taller-git.git</code></pre>
+      <section id="amend">
+        <h3>Corrigiendo commits</h3>
+        Frecuentemente cuando trabajamos y consolidamos los cambios olvidamos
+        agregar al escenario algún archivo o simplemente lo modificamos tarde y
+        lo queremos agregar a la información consolidada anteriormente.
+        <pre><code data-trim>git commit --amend --no-edit</code></pre>
+      </section>
+
+      <section id="amend1">
+        <h3>Corrigiendo commits</h3>
+        Si deseamos que el mensaje del commit cambie, podemos hacer uno nuevo
+        <pre><code data-trim>git commit --amend -m "Nuevo mensaje para el cambio"</code></pre>
       </section>
 
 
