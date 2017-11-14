@@ -57,18 +57,18 @@
           Un repositorio es una carpeta o conjunto de carpetas que contienen
           archivos.
           Podemos crear una carpeta y luego iniciar el repositorio dentro.
-          <pre><code>
-            mkdir Ejemplo && cd Ejemplo
-            git init .
+          <pre><code data-trim>
+mkdir Ejemplo && cd Ejemplo
+git init .
           </code></pre>
         </section>
 
         <section id="add">
           <h4>Agregar archivos al escenario ("stage")</h4>
-          <pre><code>
-            touch Archivo1.txt
-            echo 'Hola Mundo' >> Archivo1.txt
-            git add Archivo1.txt
+          <pre><code data-trim>
+touch Archivo1.txt
+echo 'Hola Mundo' >> Archivo1.txt
+git add Archivo1.txt
           </code></pre>
           Al ejecutar el comando git add Archivo1.txt estamos confirmando
           (agregando el archivo al escenario) que los cambios que realizamos
@@ -79,7 +79,7 @@
         <section id="commit">
           <h4>Consolidar la información ("commitear")</h4>
           Para consolidar el archivo previamente creado y puesto en escenario.
-          <pre><code>git commit -m "Commit Inicial"</code></pre>
+          <pre><code data-trim>git commit -m "Commit Inicial"</code></pre>
           La bandera -m indica que se debe consolidar el archivo con un mensaje
           informativo.
         </section>
@@ -88,7 +88,7 @@
           <h4>Clonar repositorio</h4>
           Primero nos dirigimos al directorio donde queremos que se descargue la
           copia de seguridad
-          <pre><code>git clone https://github.com/corbmx/taller-git.git</code></pre>
+          <pre><code data-trim>git clone https://github.com/corbmx/taller-git.git</code></pre>
         </section>
 
         <section id="status">
@@ -96,29 +96,29 @@
           Identifica si existe un archivo modificado o no en nuestro repositorio.
           Esto es importante ya que hay que ubicar los archivos en el escenario
           antes de consolidarlos en la base de datos.
-          <pre><code>git status</code></pre>
+          <pre><code data-trim>git status</code></pre>
         </section>
 
         <section id="rm">
           <h4>Borrar archivo</h4>
           Sirve para borrar un archivo pero en este caso sirve para agregar al
           escenario el archivo que vayamos a borrar
-          <pre><code>
-            rm Archivo1.txt
-            git status
+          <pre><code data-trim>
+rm Archivo1.txt
+git status
           </code></pre>
-          <pre><code>
-            git rm Archivo1.txt
-            git status
+          <pre><code data-trim>
+git rm Archivo1.txt
+git status
           </code></pre>
         </section>
 
         <section id="mv">
           <h4>Mover archivos o cambiar nombres</h4>
           Confirma cualquier cambio de nombre o movimiento de un archivo
-          <pre><code>
-            git mv Archivo2.txt Archivo2_cambio_de_nombre.txt
-            git status
+          <pre><code data-trim>
+git mv Archivo2.txt Archivo2_cambio_de_nombre.txt
+git status
           </code></pre>
         </section>
       </section>
