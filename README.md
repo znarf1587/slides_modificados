@@ -35,14 +35,20 @@ https://nmicht.github.io/slides-versionado/
   </ol>
   <li><a href="https://nmicht.github.io/slides-versionado/basics">GIT, comandos básicos</a></li>
   <ol>
-    <li><a href="https://nmicht.github.io/slides-versionado/basics#start">Inicializar un repositorio</a></li>
-    <li><a href="https://nmicht.github.io/slides-versionado/basics#add">Agregar archivos al stage</a></li>
-    <li><a href="https://nmicht.github.io/slides-versionado/basics#commit">Hacer un commit</a></li>
-    <li><a href="https://nmicht.github.io/slides-versionado/basics#clone">Clonar un repositorio</a></li>
-    <li><a href="https://nmicht.github.io/slides-versionado/basics#status">Revisar el estado actual de trabajo</a></li>
-    <li><a href="https://nmicht.github.io/slides-versionado/basics#rm">Eliminar archivos</a></li>
-    <li><a href="https://nmicht.github.io/slides-versionado/basics#mv">Mover archivos</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/start">Inicializar un repositorio</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/add">Agregar archivos al stage</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/comodines">Comodines para git add</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/commit">Hacer un commit</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/commit1">¿Qué poner en el mensaje del commit?</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/status">Revisar el estado actual de trabajo</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/rm">Eliminar archivos</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/mv">Mover archivos</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/diff">Cambios entre versiones</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/log">Historial (log)</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/reset1">Quitar del stage</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#/checkout1">Cancelar cambios</a></li>
   </ol>
+  <li><a href="https://nmicht.github.io/slides-versionado/remotes">GIT, remotos</a></li>
   <li><a href="#">GIT, ramas</a></li>
   <li><a href="#">Flujos de trabajo</a></li>
   <li><a href="#">Git, Hooks</a></li>
