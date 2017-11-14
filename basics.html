@@ -38,90 +38,169 @@
         <ol>
           <li><a href="#/start">Inicializar un repositorio</a></li>
           <li><a href="#/add">Agregar archivos al stage</a></li>
+          <li><a href="#/comodines">Comodines para git add</a></li>
           <li><a href="#/commit">Hacer un commit</a></li>
-          <li><a href="#/clone">Clonar un repositorio</a></li>
+          <li><a href="#/commit1">¿Qué poner en el mensaje del commit?</a></li>
           <li><a href="#/status">Revisar el estado actual de trabajo</a></li>
           <li><a href="#/rm">Eliminar archivos</a></li>
           <li><a href="#/mv">Mover archivos</a></li>
+          <li><a href="#/diff">Cambios entre versiones</a></li>
+          <li><a href="#/log">Historial (log)</a></li>
+          <li><a href="#/reset1">Quitar del stage</a></li>
+          <li><a href="#/checkout1">Cancelar cambios</a></li>
+          <li><a href="#/clone">Clonar un repositorio</a></li>
         </ol>
       </section>
 
-      <!-- -->
-      <section>
-        <section>
-          <h3>Comandos básicos</h3>
-        </section>
-
-        <section id="start">
-          <h4>Inicializar un repositorio</h4>
-          Un repositorio es una carpeta o conjunto de carpetas que contienen
-          archivos.
-          Podemos crear una carpeta y luego iniciar el repositorio dentro.
-          <pre><code data-trim>
+      <section id="start">
+        <h4>Inicializar un repositorio</h4>
+        Un repositorio es una carpeta o conjunto de carpetas que contienen
+        archivos.
+        Podemos crear una carpeta y luego iniciar el repositorio dentro.
+        <pre><code data-trim>
 mkdir Ejemplo && cd Ejemplo
 git init .
-          </code></pre>
-        </section>
+        </code></pre>
+      </section>
 
-        <section id="add">
-          <h4>Agregar archivos al escenario ("stage")</h4>
-          <pre><code data-trim>
+      <section>
+        Con el comando git init se crea una carpeta oculta llamada .git y
+        contiene toda la información necesaria para que podamos realizar las
+        versiones (copias de seguridad) de nuestro proyecto. <br>
+        En este punto Git no está llevando el control de ningún archivo.
+      </section>
+
+      <section id="status">
+        <h4>Estatus</h4>
+        Identifica si existe un archivo modificado o no en nuestro repositorio.
+        Esto es importante ya que hay que ubicar los archivos en el escenario
+        antes de consolidarlos en la base de datos.
+        <pre><code data-trim>git status</code></pre>
+      </section>
+
+      <section id="add">
+        <h4>Agregar archivos al escenario ("stage")</h4>
+        <pre><code data-trim>
 touch Archivo1.txt
 echo 'Hola Mundo' >> Archivo1.txt
 git add Archivo1.txt
-          </code></pre>
-          Al ejecutar el comando git add Archivo1.txt estamos confirmando
-          (agregando el archivo al escenario) que los cambios que realizamos
-          sobre Archivo1.txt se quieren respaldar la próxima vez que
-          consolidemos la información.
-        </section>
+        </code></pre>
+        Al ejecutar el comando git add Archivo1.txt estamos confirmando
+        (agregando el archivo al escenario) que los cambios que realizamos
+        sobre Archivo1.txt se quieren respaldar la próxima vez que
+        consolidemos la información.
+      </section>
 
-        <section id="commit">
-          <h4>Consolidar la información ("commitear")</h4>
-          Para consolidar el archivo previamente creado y puesto en escenario.
-          <pre><code data-trim>git commit -m "Commit Inicial"</code></pre>
+      <section id="comodines">
+        <h4>Comodines de git add</h4>
+        <ul>
+          <li>git add <strong>-A</strong> / git add <strong>.</strong>: Agrega todos</li>
+          <li>git add <strong>--ignore-removal</strong>: Agrega nuevos y modificados, sin los eliminados</li>
+          <li>git add <strong>-u</strong>: Agrega modificados y eliminados, sin los nuevos</li>
+        </ul>
+      </section>
+
+      <section id="commit">
+        <h4>Consolidar la información ("commitear")</h4>
+        Para consolidar el archivo previamente creado y puesto en escenario.
+        <pre><code data-trim>git commit -m "Commit Inicial"</code></pre>
+        <p class="info">
           La bandera -m indica que se debe consolidar el archivo con un mensaje
           informativo.
-        </section>
+        </p>
+      </section>
 
-        <section id="clone">
-          <h4>Clonar repositorio</h4>
-          Primero nos dirigimos al directorio donde queremos que se descargue la
-          copia de seguridad
-          <pre><code data-trim>git clone https://github.com/corbmx/taller-git.git</code></pre>
-        </section>
+      <section id="commit1">
+        <h3>¿Qué poner en el mensaje del commit?</h3>
+        <ul>
+          <li>Resume los cambios en 50 caracteres o menos</li>
+          <li>Brinca una linea en blanco</li>
+          <li>Describe detalladamente los cambios, puedes usar bullets</li>
+          <li>Sigue una guía con base a tu proyecto</li>
+        </ul>
+      </section>
 
-        <section id="status">
-          <h4>Estatus</h4>
-          Identifica si existe un archivo modificado o no en nuestro repositorio.
-          Esto es importante ya que hay que ubicar los archivos en el escenario
-          antes de consolidarlos en la base de datos.
-          <pre><code data-trim>git status</code></pre>
-        </section>
-
-        <section id="rm">
-          <h4>Borrar archivo</h4>
-          Sirve para borrar un archivo pero en este caso sirve para agregar al
-          escenario el archivo que vayamos a borrar
-          <pre><code data-trim>
+      <section id="rm">
+        <h4>Borrar archivo</h4>
+        Sirve para borrar un archivo pero en este caso sirve para agregar al
+        escenario el archivo que vayamos a borrar
+        <pre><code data-trim>
 rm Archivo1.txt
 git status
-          </code></pre>
-          <pre><code data-trim>
+        </code></pre>
+        <pre><code data-trim>
 git rm Archivo1.txt
 git status
-          </code></pre>
-        </section>
+        </code></pre>
+      </section>
 
-        <section id="mv">
-          <h4>Mover archivos o cambiar nombres</h4>
-          Confirma cualquier cambio de nombre o movimiento de un archivo
-          <pre><code data-trim>
+      <section id="mv">
+        <h4>Mover archivos o cambiar nombres</h4>
+        Confirma cualquier cambio de nombre o movimiento de un archivo
+        <pre><code data-trim>
 git mv Archivo2.txt Archivo2_cambio_de_nombre.txt
 git status
-          </code></pre>
-        </section>
+        </code></pre>
       </section>
+
+      <section id="diff">
+        <h3>Cambios entre versiones</h3>
+        Identifica todos los cambios de un archivo entre diferentes versiones.
+        <pre><code data-trim>git diff </code></pre>
+      </section>
+
+      <section id="log">
+        <h3>Historial (log)</h3>
+        Ver el historial de cambios de nuestro repositorio
+        <pre><code>git log</code></pre>
+        Es utilizado para ver el historial de cambios de nuestro repositorio.
+        Esto incluye información sobre el autor de los cambios, el mensaje breve
+        utilizado, la fecha en que se realizó y el número de serial (hash).
+      </section>
+
+      <section id="stat">
+        <h3>Log con estadísticas</h3>
+        <pre><code>git log --stat</code></pre>
+        Muestra los archivos y las estadisticas de cambios en cada uno de ellos.
+      </section>
+
+      <section>
+        <h3>Log con datos de cambios</h3>
+        <pre><code>git log -p</code></pre>
+        Muestra las líneas donde se realizaron los cambios
+        <p class="info">La bandera -1 se utiliza para observar únicamente lo
+          último que fue commiteado.</p>
+      </section>
+
+      <section>
+        <h3>Log abreviado</h3>
+        <pre><code>git log --pretty=format:"%h - %an - %ar - %s" --graph</code></pre>
+        <p class="info">Se pueden utilizar todas las banderas para cambiar las
+          salidas</p>
+      </section>
+
+      <section id="reset1">
+        <h3>Quitar archivos del stage</h3>
+        ¿Qué sucede si agregamos al escenario un archivo que ya no queremos
+        consolidarlo en ese instante? La lógica induce a que lo bajemos del
+        escenario y eso es precisamente lo que hace git reset.
+        <pre><code>git reset HEAD file</code></pre>
+      </section>
+
+      <section id="checkout1">
+        <h3>Cancelar los cambios</h3>
+        ¿Qué pasaría si ahora nos arrepentimos de esa última modificación que
+        aún no commiteamos y la quisiéramos eliminar?
+        <pre><code>git checkout -- file</code></pre>
+      </section>
+
+      <section id="clone">
+        <h3>Clonar repositorio</h3>
+        Primero nos dirigimos al directorio donde queremos que se descargue la
+        copia de seguridad
+        <pre><code data-trim>git clone https://github.com/corbmx/taller-git.git</code></pre>
+      </section>
+
 
       <section>
         <a href="#">Ir al siguiente módulo</a>
