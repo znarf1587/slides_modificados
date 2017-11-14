@@ -10,38 +10,38 @@ https://nmicht.github.io/slides-versionado/
 <ol>
   <li><a href="https://nmicht.github.io/slides-versionado/intro#/index">Introducción</a></li>
   <ol>
-    <li><a href=https://nmicht.github.io/slides-versionado/intro#control-versiones">Definición</a></li>
-    <li><a href=https://nmicht.github.io/slides-versionado/intro#caracteristicas">Características</a></li>
-    <li><a href=https://nmicht.github.io/slides-versionado/intro#clasificacion">Clasificación</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/intro#control-versiones">Definición</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/intro#caracteristicas">Características</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/intro#clasificacion">Clasificación</a></li>
       <ul>
-        <li><a href=https://nmicht.github.io/slides-versionado/intro#locales">Locales</a></li>
-        <li><a href=https://nmicht.github.io/slides-versionado/intro#centralizados">Centralizados</a></li>
-        <li><a href=https://nmicht.github.io/slides-versionado/intro#distribuidos">Distribuidos</a></li>
+        <li><a href="https://nmicht.github.io/slides-versionado/intro#locales">Locales</a></li>
+        <li><a href="https://nmicht.github.io/slides-versionado/intro#centralizados">Centralizados</a></li>
+        <li><a href="https://nmicht.github.io/slides-versionado/intro#distribuidos">Distribuidos</a></li>
       </ul>
     <li><a href="https://nmicht.github.io/slides-versionado/intro#/git-vs-mercurial">GIT vs Mercurial</a></li>
   </ol>
-  <li><a href="https://nmicht.github.io/slides-versionado/git#/index">GIT, instalación</a></li>
+  <li><a href="https://nmicht.github.io/slides-versionado/git">GIT, instalación</a></li>
   <ol>
-    <li><a href=https://nmicht.github.io/slides-versionado/git#git">¿Qué es GIT?</a></li>
-    <li><a href=https://nmicht.github.io/slides-versionado/git#instalacion">Instalación</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/git#git">¿Qué es GIT?</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/git#instalacion">Instalación</a></li>
       <ul>
-        <li><a href=https://nmicht.github.io/slides-versionado/git#install-mac">Instalación en MacOS</a></li>
-        <li><a href=https://nmicht.github.io/slides-versionado/git#install-fedora">Instalación en Fedora</a></li>
-        <li><a href=https://nmicht.github.io/slides-versionado/git#install-debian">Instalación en Debian</a></li>
-        <li><a href=https://nmicht.github.io/slides-versionado/git#install-windows">Instalación en Windows</a></li>
+        <li><a href="https://nmicht.github.io/slides-versionado/git#install-mac">Instalación en MacOS</a></li>
+        <li><a href="https://nmicht.github.io/slides-versionado/git#install-fedora">Instalación en Fedora</a></li>
+        <li><a href="https://nmicht.github.io/slides-versionado/git#install-debian">Instalación en Debian</a></li>
+        <li><a href="https://nmicht.github.io/slides-versionado/git#install-windows">Instalación en Windows</a></li>
       </ul>
-    <li><a href=https://nmicht.github.io/slides-versionado/git#ayuda">Ayuda en GIT</a></li>
-    <li><a href=https://nmicht.github.io/slides-versionado/git#config">Configuracion</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/git#ayuda">Ayuda en GIT</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/git#config">Configuracion</a></li>
   </ol>
-  <li><a href="https://nmicht.github.io/slides-versionado/basics#index">GIT, comandos básicos</a></li>
+  <li><a href="https://nmicht.github.io/slides-versionado/basics">GIT, comandos básicos</a></li>
   <ol>
-    <li><a href=https://nmicht.github.io/slides-versionado/basics#start">Inicializar un repositorio</a></li>
-    <li><a href=https://nmicht.github.io/slides-versionado/basics#add">Agregar archivos al stage</a></li>
-    <li><a href=https://nmicht.github.io/slides-versionado/basics#commit">Hacer un commit</a></li>
-    <li><a href=https://nmicht.github.io/slides-versionado/basics#clone">Clonar un repositorio</a></li>
-    <li><a href=https://nmicht.github.io/slides-versionado/basics#status">Revisar el estado actual de trabajo</a></li>
-    <li><a href=https://nmicht.github.io/slides-versionado/basics#rm">Eliminar archivos</a></li>
-    <li><a href=https://nmicht.github.io/slides-versionado/basics#mv">Mover archivos</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#start">Inicializar un repositorio</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#add">Agregar archivos al stage</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#commit">Hacer un commit</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#clone">Clonar un repositorio</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#status">Revisar el estado actual de trabajo</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#rm">Eliminar archivos</a></li>
+    <li><a href="https://nmicht.github.io/slides-versionado/basics#mv">Mover archivos</a></li>
   </ol>
   <li><a href="#">GIT, ramas</a></li>
   <li><a href="#">Flujos de trabajo</a></li>
