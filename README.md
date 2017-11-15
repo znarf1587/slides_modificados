@@ -53,6 +53,7 @@ https://nmicht.github.io/slides-versionado/
   <li><a href="#">GIT, ramas</a></li>
   <li><a href="#">Flujos de trabajo</a></li>
   <li><a href="#">Git, Hooks</a></li>
+  <li><a href="term">Terminología</a></li>
 </ol>
 
 ## :book: Otros buenos recursos
